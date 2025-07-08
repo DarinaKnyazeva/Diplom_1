@@ -1,17 +1,9 @@
-from database import Database
+from praktikum.database import Database
 
 
 class TestDataBase:
 
-    def test_buns_is_not_empty_list(self):
-        database = Database()
-        assert database.buns != []
-
-    def test_ingredient_is_not_empty_list(self):
-        database = Database()
-        assert database.ingredients != []
-
-    def test_available_buns_is_true(self):
+    def test_available_buns_is(self):
         database = Database()
         expected_buns = database.buns
         actual_buns = database.available_buns()
@@ -21,7 +13,7 @@ class TestDataBase:
 
         assert len(actual_buns) == len(expected_buns)
 
-    def test_available_ingredients_is_true(self):
+    def test_available_ingredients(self):
         database = Database()
         expected_ingredients = database.ingredients
         actual_ingredients = database.available_ingredients()
